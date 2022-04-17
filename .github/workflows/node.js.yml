@@ -18,6 +18,12 @@ jobs:
         node-version: [12.x, 14.x, 16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
+    - name: Print environment
+      run: |
+        echo $MONGO_DBUSER
+        echo $MONGO_DBPASS
+        echo $MONGO_DBHOST
+        echo $MONGO_DBNAME
     - name: MongoDB Server
       uses: timgchile/mongodb-github-action@1.7.4
       with:
