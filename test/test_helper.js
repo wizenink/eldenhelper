@@ -4,6 +4,7 @@ function dbConnect(){
   const config = require('../config')
   //MongoDB connection data
   const mongoUrl = `mongodb+srv://${config.dbUser}:${config.dbPass}@${config.dbHost}/${config.dbName}?retryWrites=true&w=majority&ssl=true`
+  console.log("Using mongoURI:",mongoUrl);
   mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
   
   mongoose.connection.once('open', () => {console.log("Database connected")})
