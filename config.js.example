@@ -1,6 +1,6 @@
 module.exports = {
-    dbUser:"root",
-    dbPass:"toor",
-    dbName:"eldenhelper",
-    dbHost:"localhost"
+    dbUser: process.env.MONGO_DBUSER || "",
+    dbPass: process.env.MONGO_DBPASS || "",
+    dbName: process.env.MONGO_DBNAME || "",
+    dbHost: process.env.MONGO_DBHOST || ""
 }
