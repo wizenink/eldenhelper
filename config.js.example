@@ -1,6 +1,6 @@
 module.exports = {
-    "dbUser":"",
-    "dbPass":"",
-    "dbName":"",
-    "dbHost":""
+    "dbUser":"root",
+    "dbPass":"toor",
+    "dbName":"eldenhelper",
+    "dbHost":"localhost"
 }
