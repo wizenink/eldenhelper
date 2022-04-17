@@ -1,0 +1,32 @@
+{
+  "name": "eldenhelper",
+  "version": "1.0.0",
+  "description": "Elden Ring Help Community Hub",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "seed": "node test/seed_database.js",
+    "test": "mocha --recursive --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wizenink/eldenhelper.git"
+  },
+  "author": "David Maseda Neira",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/wizenink/eldenhelper/issues"
+  },
+  "homepage": "https://github.com/wizenink/eldenhelper#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.3.0",
+    "mongoose": "^6.3.0",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.1.2",
+    "mocha": "^9.2.2"
+  }
+}
