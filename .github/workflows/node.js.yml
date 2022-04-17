@@ -27,13 +27,16 @@ jobs:
        mongodb-root-username: root
        mongodb-root-password: toor
     - uses: actions/checkout@v3
+    - name: Populate config file
+    - run: |
+        cp config.js.example config.js
+        cat config.js
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: |
-         cp config.js.example config.js
          npm install
          npm run test
     - run: npm run build --if-present
