@@ -5,6 +5,7 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+environment: actions
 env:
   MONGO_DBUSER: ${{secrets.MONGO_DBUSER}}
   MONGO_DBPASS: ${{secrets.MONGO_DBPASS}}
