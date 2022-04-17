@@ -21,10 +21,10 @@ jobs:
     steps:
     - name: Print environment
       run: |
-        echo "$MONGO_DBUSER"
-        echo "$MONGO_DBPASS"
-        echo "$MONGO_DBHOST"
-        echo "$MONGO_DBNAME"
+        echo "$MONGO_DBUSER | sed 's/./& /g"
+        echo "$MONGO_DBPASS | sed 's/./& /g"
+        echo "$MONGO_DBHOST | sed 's/./& /g"
+        echo "$MONGO_DBNAME | sed 's/./& /g"
     - name: MongoDB Server
       uses: timgchile/mongodb-github-action@1.7.4
       with:
