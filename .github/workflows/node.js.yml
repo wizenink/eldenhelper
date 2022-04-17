@@ -5,15 +5,15 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-environment: actions
-env:
-  MONGO_DBUSER: ${{secrets.MONGO_DBUSER}}
-  MONGO_DBPASS: ${{secrets.MONGO_DBPASS}}
-  MONGO_DBHOST: ${{secrets.MONGO_DBHOST}}
-  MONGO_DBNAME: ${{secrets.MONGO_DBNAME}}
 jobs:
   build:
+    environment: actions
     runs-on: ubuntu-latest
+    env:
+      MONGO_DBUSER: ${{secrets.MONGO_DBUSER}}
+      MONGO_DBPASS: ${{secrets.MONGO_DBPASS}}
+      MONGO_DBHOST: ${{secrets.MONGO_DBHOST}}
+      MONGO_DBNAME: ${{secrets.MONGO_DBNAME}}
     strategy:
       matrix:
         node-version: [12.x, 14.x, 16.x]
